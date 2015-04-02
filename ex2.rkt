@@ -63,7 +63,7 @@
 
 ; (sum-list '(1 2 3))
 ; (foldl + 0 '(1 2 3))
-  
+
 (define (factorial-fold n)
   (foldl * 1 (sequence 1 n))) 
 
@@ -111,9 +111,9 @@
 (define-syntax min 
   (syntax-rules ()
     ((_ val1 val2)
-       (if (< val1 val2)
-           val1
-           val2))))
+     (if (< val1 val2)
+         val1
+         val2))))
 
 #|
 (min (begin 

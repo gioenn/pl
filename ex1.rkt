@@ -59,7 +59,7 @@
 ;; quoting: quote (') prevents code evaluation, quasiquote evaluates only expressions prefixed with a comma
 
 (define (cube-list x)
-   (quasiquote (,x ^ 3 = ,(cube x))))
+  (quasiquote (,x ^ 3 = ,(cube x))))
 
 ;; sequence returns a list of numbers between lo and hi (included)
 ;; e.g. (sequence 0 5) > '(0 1 2 3 4 5)
