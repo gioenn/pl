@@ -37,7 +37,7 @@
 (define (my-map* f . lst)
   (map f lst))
 
-;; filter 
+;; filter
 
 ; (filter odd? '(2 5 1 14 6 4 7))
 

@@ -179,7 +179,6 @@
                   (display " missed")
                   (newline)))))))
 
-
 (define luigi (stricker "Luigi" 74 0))
 (define andrea (stricker "Andrea" 81 0))
 (define luca (goalkeeper "Luca" 78))
