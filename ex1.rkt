@@ -179,4 +179,42 @@
                   (display " missed")
                   (newline)))))))
 
-; to be continued 
+
+(define luigi (stricker "Luigi" 74 0))
+(define andrea (stricker "Andrea" 81 0))
+(define luca (goalkeeper "Luca" 78))
+
+(struct shootout 
+  (gk
+   stricker1
+   stricker2))
+
+(define (shootout-play! c)
+  (let ((s1 (shootout-stricker1 c)) (s2 (shootout-stricker2 c)) (gk (shootout-gk c)))
+    (begin
+      (set-stricker-goals! s1 0)
+      (set-stricker-goals! s2 0)
+      (newline)
+      (let loop ((i 0))
+        (when (or (< i 5) (= (stricker-goals s1) (stricker-goals s2)))
+          (display "Penalty ")
+          (display (+ i 1))
+          (newline)
+          (penalty! s1 gk)
+          (penalty! s2 gk)
+          (loop (+ i 1))))
+      (display "The winner is ")
+      (if (> (stricker-goals s1) (stricker-goals s2))
+          (display (player-name s1))
+          (display (player-name s2)))
+      (newline)
+      (player-print s1)
+      (player-print s2)
+      (newline))))
+
+(define competition (shootout luca andrea luigi))
+      
+
+
+
+      
