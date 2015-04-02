@@ -213,8 +213,3 @@
       (newline))))
 
 (define competition (shootout luca andrea luigi))
-      
-
-
-
-      
