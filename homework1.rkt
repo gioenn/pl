@@ -1,0 +1,154 @@
+#lang racket
+
+#|
+
+warning: not mandatory exercises, you won't get any additional points resolving them.
+for questions write to giovanni.quattrocchi@polimi.it
+
+
+exercise 1
+
+define the "gcd" function.
+
+gcd takes two numbers as input and computes the great commom divisor between the two. 
+
+examples:
+
+(gcd 8 28) -> 4
+(gcd 11 98) -> 1
+
+---
+
+exercise 2
+
+define the "nested-length" function.
+
+nested-length takes a list as argument and returns the number of element inside the list and all the nested lists.
+
+examples:
+
+(nested-length '(1 2 3)) -> 3
+(nested-length '(1 2 (2 (5 4)) 5 6)) -> 7
+
+---
+
+exercise 3
+
+define the "print-matrix" function.
+
+print-matrix takes a matrix as argument (a matrix is a vector of vectors, e.g. #(#(1 2) #(3 4)) is a 2x2 matrix) 
+and prints out the content of the matrix as in following examples.
+
+examples:
+
+> (print-matrix #(#(1 2) #(3 4)))
+1    2	
+3	  4
+
+> (print-matrix #(1 2 3))
+1	
+2
+3
+
+---
+
+exercise 4
+
+define the "vector*!" function.
+
+vector*! takes three vectors (v1 v2 v3) as arguments. 
+this function will consider v2 a Nx1 matrix, v3 a 1xM matrix; v1 must be a mutable vector of size N.
+this function computes the multiplication between v2 and v3 and saves the resulting NxM matrix in v1.
+
+example:
+
+> (define v1 (make-vector 2))      
+> (vector*! v1 #(3 2) #(4 5))
+> (print-matrix v1)
+12   15
+8    10
+> (vector*! v1 #(5 2) #(1 1 0))
+> (print-matrix v1)
+5    5    0
+2    2    0
+
+---
+
+exercise 5
+
+define the "zip" function.
+
+zip takes two lists as arguments. it returns a list of lists, where the i-th list contains the i-th element from each input list. 
+the returned list is truncated in length to the length of the shortest argument list. 
+
+examples: 
+
+(zip '(1 2 3) '(4 5 6)) -> '((1 4) (2 5) (3 6))
+(zip '(a 4 d) '(2 c)) -> '((a 2) (4 c))
+
+---
+
+exercise 6
+
+define the "split" function.
+
+split takes two arguments: a list and a splitter value. 
+it returns a list of lists in which each list is the sublist of the input list between two occurences of the splitter value.
+
+examples: 
+
+(split '(a b c x d x e x f) 'x) -> '((a b c) (d) (e))
+(split '(0 1 2 0 2 0 3 0) 0) -> '((1 2) (2) (3))
+
+---
+
+exercise 7
+
+define the "takewhile" function.
+
+takewhile takes two arguments: a predicate and a list. it returns the elements of the list until the predicate is violated.
+
+examples: 
+
+(takewhile odd? '(1 5 7 8 1 4 6 9)) -> '(1 5 7)
+(takewhile positive? '(5 11 4 2 -2 5 6) -> '(5 11 4 2)
+
+---
+
+exercise 8
+
+define the "flatmap" function.
+
+flatmap is similar to map but it works also for nested lists. it returns a flatten list.
+
+examples: 
+
+(flatmap square '(((1 2 3) 4) 0 (6 7) 8)) -> '(1 4 9 16 0 36 49 64)
+(flatmap (lambda(x) (+ x 1)) '(5 (11) ((12 23) 5))) -> '(6 12 13 24 6)
+
+---
+
+exercise 9
+
+define the "on-sign" macro.
+
+on-sign choose between three branches depending if the value considered is greater than zero, equals to zero, or less than zero.
+this macro has the following syntax:
+(on-sing <my expr> pos: <block of code> zero: <block of code> neg: <block of code>) 
+
+examples:
+
+(on-sign 2
+         pos: 'a
+         zero: 'b
+         neg: 'c) -> 'a
+
+> (on-sign (- 5 6)
+          pos: (begin (display "positive") (newline))
+          zero: (begin (display "zero") (newline))
+          neg: (begin (display "negative") (newline)))
+negative
+
+|#
+
+
