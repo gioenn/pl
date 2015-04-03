@@ -1,6 +1,6 @@
-#lang racket
+Principles of Programming Languages course @ Politecnico di Milano
 
-#|
+HOMEWORK 1
 
 warning: not mandatory exercises, you won't get any additional points resolving them.
 for questions write to giovanni.quattrocchi@polimi.it
@@ -42,7 +42,7 @@ and prints out the content of the matrix as in following examples.
 examples:
 
 > (print-matrix #(#(1 2) #(3 4)))
-1    2	
+1	  2
 3	  4
 
 > (print-matrix #(1 2 3))
@@ -148,7 +148,3 @@ examples:
           zero: (begin (display "zero") (newline))
           neg: (begin (display "negative") (newline)))
 negative
-
-|#
-
-
