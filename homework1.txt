@@ -42,8 +42,8 @@ and prints out the content of the matrix as in following examples.
 examples:
 
 > (print-matrix #(#(1 2) #(3 4)))
-1	  2
-3	  4
+1    2
+3    4
 
 > (print-matrix #(1 2 3))
 1	
