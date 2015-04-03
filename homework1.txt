@@ -134,7 +134,7 @@ define the "on-sign" macro.
 
 on-sign choose between three branches depending if the value considered is greater than zero, equals to zero, or less than zero.
 this macro has the following syntax:
-(on-sing <my expr> pos: <block of code> zero: <block of code> neg: <block of code>) 
+(on-sign <my expr> pos: <block of code> zero: <block of code> neg: <block of code>) 
 
 examples:
 
