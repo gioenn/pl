@@ -6,4 +6,4 @@ This repository contains all source files wrote during exercise lectures.
 
 (04/01/15) The second lecture covers how to define functions with an indefinite number of parameters, higher order functions and macros.
 
-(04/03/15) Published the fist part of homeworks, see the "homework1.txt" file.
+(04/03/15) Published the first part of homeworks, see the "homework1.txt" file.
