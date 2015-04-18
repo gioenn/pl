@@ -1,6 +1,7 @@
 #lang racket
 
 (require "ex1.rkt")
+(provide (all-defined-out))
 
 ; odd-only takes an indefinite number of arguments and returns a list containg only the odd ones
 
