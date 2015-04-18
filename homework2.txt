@@ -10,7 +10,7 @@ exercise 1
 
 define the "unzip" function.
 
-unzip takes a zipped (see exercise 5 of homework 1) list and returns the a list that contains the original two lists
+unzip takes a zipped list (see exercise 5 of homework 1) and returns the a list that contains the original two lists.
 
 examples:
 
@@ -32,7 +32,7 @@ exercise 3
 
 define the "make-iterator" function that takes a list as argument and returns a closure. 
 this closure is an iterator object with the two well-known methods has-next? and next. 
-Use the 'closures as objects' technique seen in class
+use the 'closures as objects' technique seen in class.
 
 
 example:
@@ -82,7 +82,7 @@ given this code:
      'end)))
 
 
-enrich the iter macro with the following syntax using the list-iter-cc function
+enrich the iter macro with the following syntax using the list-iter-cc function.
 
 (iter <a variable symbol> in <a list> <code>)
 
