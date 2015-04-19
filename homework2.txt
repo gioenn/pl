@@ -82,7 +82,7 @@ given this code:
      'end)))
 
 
-enrich the iter macro with the following syntax using the list-iter-cc function.
+enrich the iter macro using the list-iter-cc function with the following syntax.
 
 (iter <a variable symbol> in <a list> <code>)
 
