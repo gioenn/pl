@@ -97,7 +97,7 @@ it returns a list of lists in which each list is the sublist of the input list b
 
 examples: 
 
-(split '(a b c x d x e x f) 'x) -> '((a b c) (d) (e))
+(split '(a b c x d x e x f) 'x) -> '((a b c) (d) (e) (f))
 (split '(0 1 2 0 2 0 3 0) 0) -> '((1 2) (2) (3))
 
 ---
