@@ -21,7 +21,7 @@ examples:
 
 exercise 2
 
-define the "zip*" a zip function that takes an indefinite number of lists to be zipped instead of only two.
+define "zip*", a zip function that takes an indefinite number of lists to be zipped instead of only two.
 
 (zip* '(1 2 3) '(4 5 6) '(7 8 9)) -> '((1 4 7) (2 5 8) (3 6 9))
 (zip* '(1 2 3)) -> '((1) (2) (3))
