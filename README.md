@@ -14,3 +14,5 @@ This repository contains all source files wrote during exercise lectures.
 (17/04/15) The third lecture covers macros, closures, eval and continuations.
 
 (18/04/15) Second part of homeworks published.
+
+(12/06/15) First lecture about Prolog published.
