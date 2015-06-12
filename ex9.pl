@@ -1,6 +1,6 @@
 % a recap from the lessons
 
-% atoms: my_atom atom1 atomOne 'Vincent' ' ' , ; :- 
+% atoms: my_atom atom1 atomOne 'Vincent' ' ' , ; :-
 % numbers: 1 -100
 % strings: "string"
 % variables: X Y Var VAR _var
@@ -132,11 +132,3 @@ perm([X|Y], Z) :- perm(Y, W), takeout(X, Z, W).
 % step1a: W=[2,3], takeout(1, Z, [2,3]), Z=[1,2,3] ; [2,1,3] ; [2,3,1]
 % step1b: W=[3,2], takeout(1, Z, [3,2]), Z=[1,3,2] ; [3,1,2] ; [3,2,1]
 % N = [1,2,3] ; [2,1,3] ; [2,3,1] ; [1,3,2] ; [3,1,2] ; [3,2,1]
-
-
-
-
-
-
-
-
