@@ -15,4 +15,6 @@ This repository contains all source files wrote during exercise lectures.
 
 (18/04/15) Second part of homeworks published.
 
-(12/06/15) First lecture about Prolog published.
+(12/06/15) First lecture about Prolog published (ex9.pl).
+
+(18/06/15) Second lecture about Prolog published (ex10.pl) + extra exercises (extra.pl).
