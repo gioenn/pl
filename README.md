@@ -2,6 +2,7 @@
 
 This repository contains all source files wrote during exercise lectures.
 
+(18/06/15) Solutions to homework 1,2 and 3 has been published.
 
 ### Scheme
 
@@ -19,4 +20,6 @@ This repository contains all source files wrote during exercise lectures.
 
 (12/06/15) First lecture about Prolog published (ex9.pl).
 
-(18/06/15) Second lecture about Prolog published (ex10.pl) + extra exercises (extra.pl).
+(18/06/15) Second lecture about Prolog published (ex10.pl) + third part of homework exercises.
+
+

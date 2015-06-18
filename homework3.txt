@@ -1,0 +1,49 @@
+% Consider a tree whose nodes are stored as lists, and the first
+% element is the value stored at that node, while the other elements are subtrees.
+% Define a possibly concise function to find an element in the tree
+% We suppose that trees are stored as lists [key, subtree_1, subtree_2, ...]
+% e.g. [root,[a,[b,1,2,3],[c,2],[f,[g,x,y]]]]
+
+
+
+% Define the pack function that returns a list of list, each sub-list contains the adiacent occurences of an atom.
+% pack [1, 1, 1, 2, 3, 3, 1] -> [[1,1,1], [2], [3,3], [1]]  
+
+
+
+% Define the encode function that returns a list of list, each sub-list contains an atom and the number of its adiacent occurences.
+% encode [1, 1, 1, 2, 3, 3, 1] -> [[1, 3], [2,1], [3,2], [1,1]]  
+
+
+
+% Define th decode function that takes an encoded list and returns the 'original' list.
+% decode [[1, 3], [2,1], [3,2], [1,1]] -> [[1, 3], [2,1], [3,2], [1,1]]  
+
+
+% Consider a binary tree e.g., 
+%        5
+%   2        8
+% 1   3    6  11
+
+% stored using the 'tree' term. tree has three parameters: a number, a left tree and a right tree. a leaf is represented using the empty atom. e.g.,
+
+% tree(5, tree(2, tree(1, empty, empty), tree(3, empty, empty)), tree(8, tree(6, empty, empty), tree(11, empty, empty)))
+
+% Given the following tree_singleton function:
+
+tree_singleton(N,R) :- R = tree(N, empty, empty).
+
+% Define the tree_insert function to insert an node value (a number) in a tree 
+% tree_insert(N, CurrentTree, NewTree)
+
+
+% Define the tree_elem function to find a node value in a tree 
+% tree_elem(N, Tree)
+
+
+% Define the tree_sum function to sum all the node values in a tree
+% tree_sum(Tree, Sum)
+
+
+% Define the tree_values function to return a list of all the values contained in a tree
+% tree_values(Tree, List)
