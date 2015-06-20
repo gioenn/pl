@@ -87,27 +87,3 @@
          (let ((var (car head)))
            code ... 
            (loop ((cdr head)))))))))
-
-
-#|
-(define (list-iter lst)
-  (define iter
-    (lambda ()
-      (call/cc control-state)))
-  (define control-state
-    (lambda (return)
-      (for-each
-       (lambda (element)
-         (call/cc
-          (lambda (resume-here)
-            (set! control-state resume-here)
-            (return element)))) lst)
-      (return 'list-ended)))
-  iter)
-
-(define myl (list-iter '(1 2 3)))
-(myl)
-(myl)
-(myl)
-(myl)
-|#
