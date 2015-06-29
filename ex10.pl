@@ -1,4 +1,4 @@
-% use is instead of = to assign to a var the value of a numerical expression
+% use is instead of = to assign the value of a numerical expression to a var
 len([], 0).
 len([_|T], N) :- len(T, N1), N is N1 + 1.
 
@@ -39,7 +39,7 @@ find2([Y|YS], X) :- Y=X, ! ; find2(YS, X).
 foldl(_, [], Acc, Acc).
 foldl(F, [X|XS], Acc, R) :- call(F, X, Acc, Y), foldl(F, XS, Y, R).
 
-% emits all possible right triangles that you can create 
+% emits all possible right triangles that you can create with natural numbers < N 
 right_triangles(N, A, B, C) :- between(1, N, C), between(1, C, B), between(1, B, A), C^2 =:= A^2 + B^2.
 
 % reverse + map
@@ -50,7 +50,7 @@ revmap(F, [X|XS], Z) :- revmap(F, XS, Y), call(F, X, T), append(Y, [T], Z).
 revmap(_, [], Acc, Acc).
 revmap(F, [X|XS], Acc, Z) :- call(F, X, T), revmap(F, XS, [T|Acc], Z).
 
-% prolog cant unify a(b,c) with something like X(Y, Z). if you need to decompose a term you can you the =.. operator. 
+% prolog cant unify a(b,c) with something like X(Y, Z). if you need to decompose a term then you can use the =.. operator. 
 % =.. binds a term with a list containg the term name (functor) and its arguments e.g., a(b, c) =.. X, X will be [a, b, c].
 
 pred(X) :- X =.. [P|Args], write("Predicate '"), write(P), write("' with args: "), writeln(Args).
