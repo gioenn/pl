@@ -2,7 +2,7 @@
 
 This repository contains all source files wrote during exercise lectures.
 
-(18/06/15) Solutions to homeworks 1, 2 and 3 has been published.
+(18/06/15) Solutions of homeworks 1, 2 and 3 have been published.
 
 ### Scheme
 
