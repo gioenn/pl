@@ -58,7 +58,7 @@
 (define ((make-greets-curried greet) who)
   (string-append greet " " who))
 
-; eval and omoiconicity + clousures
+; eval and homoiconicity + closures
 
 (define ((eval-formula formula) x y)
   (eval (quasiquote (let ((x ,x) (y ,y)) ,formula))))
