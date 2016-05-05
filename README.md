@@ -11,3 +11,5 @@ This repository contains all source files wrote during exercise lectures.
 (13/04/16) The third lecture covers fold, custom higher order functions and macro.
 
 (14/04/16) First homework published (not mandatory)
+
+(04/05/16) The fourth lecture covers closures and continuations in Scheme and the basics of Prolog
