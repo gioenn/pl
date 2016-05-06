@@ -13,3 +13,6 @@ This repository contains all source files wrote during exercise lectures.
 (14/04/16) First homework published (not mandatory)
 
 (04/05/16) The fourth lecture covers closures and continuations in Scheme and the basics of Prolog
+
+(06/05/16) The fifth lecture covers recursion with and without the accumulator pattern, higher order functions, equality predicates, numerical expressions and the cut operator. Furthermore the project track was presented (see PDF).
+
