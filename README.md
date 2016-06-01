@@ -16,3 +16,4 @@ This repository contains all source files wrote during exercise lectures.
 
 (06/05/16) The fifth lecture covers recursion with and without the accumulator pattern, higher order functions, equality predicates, numerical expressions and the cut operator. Furthermore the project track was presented (see PDF).
 
+(01/06/16) Second and third homeworks published (not mandatory)
