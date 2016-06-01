@@ -1,0 +1,97 @@
+Principles of Programming Languages course @ Politecnico di Milano
+
+HOMEWORK 2
+
+warning: not mandatory exercises, you won't get any additional points resolving them.
+for questions write to giovanni.quattrocchi@polimi.it
+
+
+exercise 1
+
+define the "unzip" function.
+
+unzip takes a zipped list (see exercise 5 of homework 1) and returns the a list that contains the original two lists.
+
+examples:
+
+(unzip '((1 4) (2 5) (3 6))) -> '((1 2 3) (4 5 6))
+(unzip '((a 2) (4 c))) -> '((a 4) (2 c))
+
+---
+
+exercise 2
+
+define "zip*", a zip function that takes an indefinite number of lists to be zipped instead of only two.
+
+(zip* '(1 2 3) '(4 5 6) '(7 8 9)) -> '((1 4 7) (2 5 8) (3 6 9))
+(zip* '(1 2 3)) -> '((1) (2) (3))
+
+---
+
+exercise 3
+
+define the "make-iterator" function that takes a list as argument and returns a closure. 
+this closure is an iterator object with the two well-known methods has-next? and next. 
+use the 'closures as objects' technique seen in class.
+
+
+example:
+
+(define my-it (make-iterator '(1 2 3)))
+(my-it 'has-next?) -> #t
+(my-it 'next) -> 1
+(my-it 'next) -> 2
+(my-it 'has-next?) -> #t
+(my-it 'next) -> 3
+(my-it 'has-next?) -> #f
+(my-it 'next) -> error
+
+---
+
+exercise 4
+
+define the "iter" macro.
+
+iter uses a closure-iterator to iterate through a list. iter has the following syntax:
+
+(iter <the iterator> -> <a variable symbol> <code>)
+
+
+example:
+
+(define my-it (make-iterator '(1 2 3)))
+
+(iter my-it -> x
+      (display x)
+      (newline))
+      
+---
+
+exercise 5
+
+given this code:
+
+(define (list-iter-cc lst)
+  (call/cc 
+   (lambda (return) 
+     (for-each               
+      (lambda (x)
+        (call/cc (lambda (next-step)
+                   (return (cons x next-step))))) 
+      lst)
+     'end)))
+
+
+enrich the iter macro using the list-iter-cc function with the following syntax.
+
+(iter <a variable symbol> in <a list> <code>)
+
+example:
+
+(iter x in '(1 2 3) 
+	(display x)
+	(newline)) 
+
+
+
+
